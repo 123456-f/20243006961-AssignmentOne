@@ -29,6 +29,46 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        btnFacilities = findViewById(R.id.btnFacilities);
+        btnEvents = findViewById(R.id.btnEvents);
+        btnClubs = findViewById(R.id.btnClubs);
+        btnSupport = findViewById(R.id.btnSupport);
+
+        // 跳转到 Facilities
+        btnFacilities.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, FacilitiesActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        // 跳转到 Events
+        btnEvents.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, EventsActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        // 跳转到 Clubs
+        btnClubs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ClubsActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        // 跳转到 Support
+        btnSupport.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, SupportActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 }
