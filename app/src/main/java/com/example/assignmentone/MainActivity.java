@@ -34,40 +34,32 @@ public class MainActivity extends AppCompatActivity {
         btnClubs = findViewById(R.id.btnClubs);
         btnSupport = findViewById(R.id.btnSupport);
 
-        // 跳转到 Facilities
-        btnFacilities.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, FacilitiesActivity.class);
-                startActivity(intent);
-            }
+        // Facilities，传索引0
+        btnFacilities.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, DetailActivity.class);
+            intent.putExtra("ITEM_INDEX", 0); // 传递唯一标识符
+            startActivity(intent);
         });
 
-        // 跳转到 Events
-        btnEvents.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, EventsActivity.class);
-                startActivity(intent);
-            }
+        // Events，传索引1
+        btnEvents.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, DetailActivity.class);
+            intent.putExtra("ITEM_INDEX",1);
+            startActivity(intent);
         });
 
-        // 跳转到 Clubs
-        btnClubs.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, ClubsActivity.class);
-                startActivity(intent);
-            }
+        // Clubs，传索引2
+        btnClubs.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, DetailActivity.class);
+            intent.putExtra("ITEM_INDEX",2);
+            startActivity(intent);
         });
 
-        // 跳转到 Support
-        btnSupport.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, SupportActivity.class);
-                startActivity(intent);
-            }
+        // Support，传索引3
+        btnSupport.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, DetailActivity.class);
+            intent.putExtra("ITEM_INDEX",3);
+            startActivity(intent);
         });
 
     }
