@@ -47,6 +47,7 @@
             android:gravity="center">
 
             <ImageButton
+                android:background="@drawable/button_selector"
                 android:id="@+id/btnFacilities"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
@@ -70,6 +71,7 @@
             android:gravity="center">
 
             <ImageButton
+                android:background="@drawable/button_selector"
                 android:id="@+id/btnEvents"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
@@ -93,6 +95,7 @@
             android:gravity="center">
 
             <ImageButton
+                android:background="@drawable/button_selector"
                 android:id="@+id/btnClubs"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
@@ -116,6 +119,7 @@
             android:gravity="center">
 
             <ImageButton
+                android:background="@drawable/button_selector"
                 android:id="@+id/btnSupport"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
