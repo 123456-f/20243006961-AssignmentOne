@@ -2,33 +2,72 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="16dp">
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <ImageView
-            android:id="@+id/detailImage"
-            android:layout_width="120dp"
-            android:layout_height="120dp"/>
-
-        <TextView
-            android:id="@+id/detailTitle"
+        <!--顶部横幅：局部校园背景，图标+标题在此层-->
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="This is a title"
-            android:textSize="24sp"
-            android:layout_marginVertical="12dp"/>
+            android:layout_height="220dp">
 
+            <!--校园背景图片-->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/img_main_banner"
+                android:scaleType="centerCrop"/>
+
+            <!--黑色半透明遮罩，加深背景，文字看得清-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#A0000000"/>
+
+            <!--水平布局：左边图标detailImage，右边标题detailTitle-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp">
+
+                <!--Java代码引用：R.id.detailImage 【不可修改id】-->
+                <ImageView
+                    android:id="@+id/detailImage"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"/>
+
+                <!--Java代码引用：R.id.detailTitle，横幅右侧白色大字，显示Facilities/Events等【不可修改id】-->
+                <TextView
+                    android:id="@+id/detailTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="18dp"
+                    android:textSize="28sp"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+        </FrameLayout>
+
+        <!--横幅下方：全部正文内容，R.id.detailContent【id固定，不修改】-->
         <TextView
             android:id="@+id/detailContent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="This is content"
+            android:padding="16dp"
             android:textSize="16sp"/>
 
     </LinearLayout>
 </ScrollView>
+
+
+
+
+
+
